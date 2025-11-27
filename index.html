@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Special Letter 💖</title>
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: "Poppins", sans-serif;
+        background: #ffd6e0;
+        overflow: hidden;
+    }
+
+    .screen {
+        width: 100vw;
+        height: 100vh;
+        display: none;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        text-align: center;
+        animation: fade 0.8s ease forwards;
+    }
+
+    @keyframes fade {
+        from { opacity: 0; transform: translateY(20px); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+        font-size: 2rem;
+        color: #d1005a;
+    }
+
+    p {
+        font-size: 1.2rem;
+        color: #5a0034;
+        margin-top: 10px;
+        line-height: 1.6;
+    }
+
+    button {
+        margin-top: 25px;
+        padding: 12px 25px;
+        border: none;
+        background: #ff006e;
+        color: white;
+        font-size: 1.1rem;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    button:hover {
+        background: #d1005a;
+        transform: scale(1.07);
+    }
+
+    .heart {
+        font-size: 3rem;
+        animation: beat 1.2s infinite;
+        margin-bottom: 10px;
+    }
+
+    @keyframes beat {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+        100% { transform: scale(1); }
+    }
+</style>
+
+</head>
+<body>
+
+<!-- PAGE 1 -->
+<div id="page1" class="screen" style="display:flex;">
+    <div class="heart">💖</div>
+    <h1>Hey Akka… 💕</h1>
+    <p>I made something special for you… because I wanted to say something properly and with love ✨</p>
+    <button onclick="next(2)">Next ➜</button>
+</div>
+
+<!-- PAGE 2 -->
+<div id="page2" class="screen">
+    <div class="heart">💞</div>
+    <h1>First… I'm Really Sorry 💗</h1>
+    <p>My situation hasn’t been good lately because of some personal issues, and I've been feeling really low. That’s why I couldn’t do it on time. I’m truly sorry, Akka 🌸</p>
+    <button onclick="next(3)">Next ➜</button>
+</div>
+
+<!-- PAGE 3 -->
+<div id="page3" class="screen">
+    <div class="heart">💘</div>
+    <h1>And About the Birthday… 💝</h1>
+    <p>Sorry for not wishing you exactly at 12… I know birthdays are special and timing feels important. I messed up, and I’m truly sorry for that.</p>
+    <button onclick="next(4)">Next ➜</button>
+</div>
+
+<!-- PAGE 4 -->
+<div id="page4" class="screen">
+    <div class="heart">💗</div>
+    <h1>About the Status Too… 😔💕</h1>
+    <p>Sorry for not putting your birthday photos in my status. You deserved that love and hype. I should’ve posted without being told. I’m really sorry, Akka 💕</p>
+    <button onclick="next(5)">Next ➜</button>
+</div>
+
+<!-- PAGE 5 -->
+<div id="page5" class="screen">
+    <div class="heart">💝</div>
+    <h1>I Need to Tell You Something 🌷</h1>
+    <p>I wished someone else only out of formality… nothing more. They are not more important than you. You are always my first in everything. Always. 💖</p>
+    <button onclick="next(6)">Next ➜</button>
+</div>
+
+<!-- PAGE 6 -->
+<div id="page6" class="screen">
+    <div class="heart">💗</div>
+    <h1>You Mean So Much To Me 💕</h1>
+    <p>You’re not just my sister… You’re someone I look up to, someone I love, and someone who has a huge place in my life. I never want to disappoint you.</p>
+    <button onclick="next(8)">Next ➜</button>
+</div>
+
+
+
+<!-- PAGE 8 -->
+<div id="page8" class="screen">
+    <div class="heart">💞</div>
+    <h1>Forever Yours… 💗</h1>
+    <p>Thank you for being in my life, and for being the best sister anyone could ask for. I love you, Akka. Truly. Always. 💖<br><br>
+       — Yours,<br>
+       <strong>Vinnu ❤️</strong></p>
+    <button onclick="restart()">Start Again 🔁</button>
+</div>
+
+<script>
+function next(n) {
+    document.querySelectorAll(".screen").forEach(s => s.style.display = "none");
+    document.getElementById("page" + n).style.display = "flex";
+}
+
+function restart() {
+    next(1);
+}
+</script>
+
+</body>
+</html>
